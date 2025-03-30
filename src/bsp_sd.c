@@ -290,9 +290,9 @@ uint8_t BSP_SD_Init(void)
     uSdHandle.Init.ClockBypass         = SD_CLK_BYPASS;
 #endif
     uSdHandle.Init.ClockPowerSave      = SD_CLK_PWR_SAVE;
-    uSdHandle.Init.BusWide             = SD_BUS_WIDE_1B;
+    uSdHandle.Init.BusWide             = SD_BUS_WIDE_4B;
     uSdHandle.Init.HardwareFlowControl = SD_HW_FLOW_CTRL;
-    uSdHandle.Init.ClockDiv            = SD_CLK_DIV;
+    uSdHandle.Init.ClockDiv            = 0x08;
 #if defined(USE_SD_TRANSCEIVER) && (USE_SD_TRANSCEIVER != 0U)
 #if defined(SDMMC_TRANSCEIVER_ENABLE)
     uSdHandle.Init.Transceiver = SD_TRANSCEIVER_ENABLE;
